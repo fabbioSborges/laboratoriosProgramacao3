@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #fff; /* atributo pode ser cor ou hexadeciam*/
+            font-size: 30px; /* numero associados a unidades */
+            text-align: center; /* valores pré-definidos */
+            /* multiplos valores */
+            border: dashed 5px navy; /* multiplus atributos */
+            font-family: Helvetica, sans-serif; /* pode atribuir alternancia se ñ encontrar a primeira  a alternativa é a segunda*/
+            /* funções */
+            width: calc(100% - 40px); /* colocar função a tag de class seletor vai ter um tamanho de 100% - Xpx */
+            background-color: rgb(3, 153, 18); /* função para definir cor */
+        }
+
+        /* Usando uma pseudo-classe -- aplica estilos quando determinados estados podem acontecer
+            houver: é utilizado quando o mouse do usuario passar por cima*/ 
+        .seletor:hover {
+            background-color: orangered;
+        }
+
+        /* Usando um pseudo-elemento -- aplica estilos para algumas partes do elemento
+        first-later - aumentar somente a primeira letra do elemento */
+        .seletor::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>
