@@ -1,0 +1,60 @@
+<h1> Formulario </h1>
+
+<!--Requisição ao serviço-->
+<form>
+    <input type="hidden" name="id" value="3">
+
+    <label for="nome">Nome </label>
+    <input type="text" name="Nome">
+    
+    <label for="senha">Senha </label>
+    <input type="password" name="Senha" id="">
+
+    <label for="mensagem">Mensagem </label>
+    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+    
+    
+    <div>
+        <label for="tipo de usuario">Tipo de usuario </label>
+        <input type="radio" name="tipo" value="aluno"> Aluno
+        <input type="radio" name="tipo" value="professor"> Professor
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+
+    
+    <select name="estado" id="">
+        <option value="Selecione"> Selecione </option>
+        <option value="piripiri"> Piripiri </option>
+        <option value="Parnaiba"> PArnaiba </option>
+        <option value="Teresina"> Teresina </option>
+    </select>
+
+    <select name="interesses" multiple size="S">
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="C">C</option>
+        <option value="JS">Java Script</option>
+    </select>
+    
+    <button  formaction="http://localhost:3003/usuarios" formmethod="POST"> Incluir </button>
+
+    
+    <!--<button  formaction="http://localhost:3003/usuarios/3"> Alterar </button> -->
+
+</form> 
+
+<style>
+    input, textarea, select{
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        display: inline;
+    }
+
+</style>

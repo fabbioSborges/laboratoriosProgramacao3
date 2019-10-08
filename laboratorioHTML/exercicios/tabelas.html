@@ -1,0 +1,79 @@
+<h1>Tabela </h1>
+<table>
+		<tr>
+				<th>Título	da	primeira	coluna</th>
+				<th>Título	da	segunda	coluna</th>
+		</tr>
+		<tr>
+				<td>Linha	1,	coluna	1</td>
+				<td>Linha	1,	coluna	2</td>
+		</tr>
+		<tr>
+				<td>Linha	2,	coluna	1</td>
+				<td>Linha	2,	coluna	2</td>
+		</tr>
+</table>
+
+
+<h2>Tabela Dois</h2>
+
+<table border="1">
+    <caption> Produtos </caption> <!-- cabecalho-->
+    <thead><!--cabecalho-->
+        <tr>
+            <th>Produtos</th>
+            <th>Preço</th>
+            <th>QUantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody> <!--corpo da tabela-->
+        <tr>
+            <td>Ipad</td>
+            <td>3200</td>
+            <td>2</td>
+            <td>6400</td>
+        </tr>
+        <tr>
+            <td>celualr</td>
+            <td>3200</td>
+            <td>2</td>
+            <td>6400</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" rowspan="2"> Total </td>
+            <td> 12800</td>
+        </tr>
+        <tr>
+            <td>teste</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    th, td{
+        padding: 10px;
+
+    }
+
+    thead tr{
+        border-bottom: solid 3px #444;
+
+    }
+
+    tbody tr:hover{
+        background-color: aquamarine;
+    }
+    tfoot {
+        background-color: burlywood;
+        color: brown;
+        font-weight: bold;
+    }
+
+
+</style>

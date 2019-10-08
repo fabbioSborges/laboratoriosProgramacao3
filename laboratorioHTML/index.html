@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagina do curso</title>
+    <style>
+        #conteudo{
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header> 
+        <h1> exercicios </h1>
+    </header>
+    <nav>
+        <a href="exercicios/teste1.html"> Aula 01</a> |
+        <a href="exercicios/texto1.html"> tag texto 01</a> |
+        <a href="exercicios/texto2.html"> tag texto 02</a> |
+        <a href="exercicios/listas.html"> listas</a> |
+        <a href="exercicios/link.html"> links</a> |
+        <a href="exercicios/tabelas.html"> tabelas</a> |
+        <a href="exercicios/tagNaoVisuais.html"> Tag não visuais</a> |
+        <a href="exercicios/formulario.html"> formulario</a> |
+        <a href="exercicios/formulario/form.html"> formulario02</a> |
+        <a href="exercicios/formulario/form2.html"> formulario03</a> |
+    </nav>
+    <section id="conteudo">
+    </section>
+    <footer>
+        Pagina da disciplina de programação 3
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => { // selecionar todas as tag 'a'
+            // console.log(link); //imprimir o retorno;
+            
+            const conteudo = document.getElementById('conteudo') //obter a sction conteúdo
+                
+            link.onclick = function(e){
+                //console.log("Ação")
+                e.preventDefault() //previnir que a navegação ocorra
+                fetch(link.href) // devolveo o retorno do click - promisse 
+                    .then(resp => resp.text()) // armazena o object
+                    .then(html => conteudo.innerHTML = html) // chamada AJAX para o link que clicou
+                   
+            }
+
+        })
+    </script>
+</body>
+</html>
